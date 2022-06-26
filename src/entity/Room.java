@@ -35,7 +35,5 @@ public class Room {
         this.room_id = room_id;
     }
 
-    public Room() {
 
-    }
 }

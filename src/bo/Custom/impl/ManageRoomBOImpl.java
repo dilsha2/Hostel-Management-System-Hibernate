@@ -3,6 +3,7 @@ package bo.Custom.impl;
 import bo.Custom.ManageRoomBO;
 import dao.Custom.RoomDAO;
 import dao.Custom.impl.RoomDAOImpl;
+import dao.DAOFactory;
 import dto.RoomDTO;
 import entity.Room;
 
@@ -10,9 +11,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ManageRoomBOImpl implements ManageRoomBO {
+    private final RoomDAO roomDAO = (RoomDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.ROOM);
+
     @Override
     public boolean add(RoomDTO roomDTO) throws Exception {
-        RoomDAO roomDAO = new RoomDAOImpl();
+
         return roomDAO.add(new Room(
                 roomDTO.getRoom_id(),
                 roomDTO.getType(),
@@ -23,9 +26,8 @@ public class ManageRoomBOImpl implements ManageRoomBO {
 
     @Override
     public List<RoomDTO> loadAllStudent() throws Exception {
-        RoomDAO roomDAO = new RoomDAOImpl();
         List<Room> all = roomDAO.findAll();
-        ArrayList<RoomDTO> roomsDto= new ArrayList<>();
+        ArrayList<RoomDTO> roomsDto = new ArrayList<>();
 
         for (Room room : all) {
             roomsDto.add(new RoomDTO(room.getRoom_id(),
@@ -39,7 +41,6 @@ public class ManageRoomBOImpl implements ManageRoomBO {
 
     @Override
     public boolean updateRoom(RoomDTO roomDTO) throws Exception {
-        RoomDAO roomDAO = new RoomDAOImpl();
         return roomDAO.update(new Room(
                 roomDTO.getRoom_id(),
                 roomDTO.getType(),
@@ -50,7 +51,6 @@ public class ManageRoomBOImpl implements ManageRoomBO {
 
     @Override
     public boolean deleteRoom(String id) throws Exception {
-        RoomDAO roomDAO = new RoomDAOImpl();
         return roomDAO.delete(id);
     }
 

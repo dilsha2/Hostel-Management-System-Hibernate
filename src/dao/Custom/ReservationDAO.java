@@ -8,4 +8,5 @@ import java.sql.SQLException;
 
 public interface ReservationDAO extends CrudDAO<RoomReservation,String> {
     String generateNewId() throws SQLException, ClassNotFoundException, IOException;
+    String generateRoomAvailableStatus(String id) throws SQLException, ClassNotFoundException, IOException;
 }
