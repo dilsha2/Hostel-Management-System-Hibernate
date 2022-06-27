@@ -71,7 +71,7 @@
             <Font name="System Bold Italic" size="20.0" />
          </font>
       </Label>
-      <JFXButton layoutX="442.0" layoutY="334.0" onAction="#registerOnAction" prefHeight="49.0" prefWidth="132.0" style="-fx-background-color: #01176b;" text="Register" textFill="#eeeeee">
+      <JFXButton fx:id="btnRegister" layoutX="442.0" layoutY="334.0" onAction="#registerOnAction" prefHeight="49.0" prefWidth="132.0" style="-fx-background-color: #01176b;" text="Register" textFill="#eeeeee">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
