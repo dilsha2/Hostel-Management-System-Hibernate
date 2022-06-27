@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="reservationDetailContext" prefHeight="541.0" prefWidth="693.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReservationDetailsFormController">
    <children>
       <Label layoutX="259.0" layoutY="22.0" text="Reservation Deatails">
@@ -36,10 +35,9 @@
       </JFXTextField>
       <TableView fx:id="tblReservationDetails" layoutX="31.0" layoutY="203.0" prefHeight="311.0" prefWidth="613.0">
         <columns>
-          <TableColumn fx:id="colStId" prefWidth="75.0" text="Student ID" />
-          <TableColumn fx:id="colStName" prefWidth="178.0" text="Student Name" />
-            <TableColumn fx:id="colRdate" prefWidth="178.0" text="Register Date" />
-            <TableColumn fx:id="colKMoney" prefWidth="181.0" text="Key Money" />
+          <TableColumn fx:id="colStId" prefWidth="99.0" text="Student ID" />
+          <TableColumn fx:id="colStName" prefWidth="325.0" text="Student Name" />
+            <TableColumn fx:id="colRdate" prefWidth="188.0" text="Register Date" />
         </columns>
       </TableView>
    </children>

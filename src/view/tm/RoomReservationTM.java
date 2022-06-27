@@ -8,16 +8,16 @@ public class RoomReservationTM extends RoomReservationDTO {
     private String student_id;
     private String name;
     private LocalDate date;
-    private double keyMoney;
 
-    public RoomReservationTM() {
+
+    public RoomReservationTM(String student_id, String name, String reservationDate) {
     }
 
-    public RoomReservationTM(String student_id, String name, LocalDate date, double keyMoney) {
+    public RoomReservationTM(String student_id, String name, LocalDate date) {
         this.student_id = student_id;
         this.name = name;
         this.date = date;
-        this.keyMoney = keyMoney;
+
     }
 
     public String getStudent_id() {
@@ -44,13 +44,6 @@ public class RoomReservationTM extends RoomReservationDTO {
         this.date = date;
     }
 
-    public double getKeyMoney() {
-        return keyMoney;
-    }
-
-    public void setKeyMoney(double keyMoney) {
-        this.keyMoney = keyMoney;
-    }
 
     @Override
     public String toString() {
@@ -58,7 +51,6 @@ public class RoomReservationTM extends RoomReservationDTO {
                 "student_id='" + student_id + '\'' +
                 ", name='" + name + '\'' +
                 ", date=" + date +
-                ", keyMoney=" + keyMoney +
                 '}';
     }
 }
