@@ -33,6 +33,8 @@ public class StudentRegiterFormController {
     public JFXTextField txtQty;
     public Label lblAvailable;
     public JFXButton btnRegister;
+    public JFXTextField txtResNumber;
+    public JFXButton btnClear;
     int roomCount;
 
     private final RegisterStudentBO registerStudentBO = (RegisterStudentBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.REGISTER_STUDENT);
@@ -124,12 +126,12 @@ public class StudentRegiterFormController {
         cmbStRegNumber.getItems().addAll(registerStudentBO.getStudentIds());
     }
 
-    public void registerOnAction(ActionEvent actionEvent) {
+    public void registerOnAction(ActionEvent actionEvent) throws Exception {
         if (lblAvailable.equals("NOT AVAILABLE") | cmbStRegNumber.getSelectionModel().isEmpty() || cmbRoomId.getSelectionModel().isEmpty() || date.getValue() == null) {
             new Alert(Alert.AlertType.ERROR, "Something Went Wrong. Pleases try again !").showAndWait();
         } else {
             if (registerStudentBO.addReservation(new RoomReservationDTO(
-                    txtRejFormNum.getText(),
+                    txtResNumber.getText(),
                     date.getValue(),
                     cmbStRegNumber.getValue(),
                     cmbRoomId.getValue(),
@@ -146,6 +148,12 @@ public class StudentRegiterFormController {
     }
 
     private void generateNewReservationID() {
+        try {
+            String s = registerStudentBO.generateNewReservationID();
+            txtResNumber.setText(s);
+        } catch (SQLException | ClassNotFoundException | IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void clear(){
@@ -160,5 +168,9 @@ public class StudentRegiterFormController {
         cmbStRegNumber.setValue(null);
         cmbRoomId.setValue(null);
         lblAvailable.setText("");
+    }
+
+    public void clearOnAction(ActionEvent actionEvent) {
+        clear();
     }
 }
