@@ -76,7 +76,7 @@
                   <Font name="System Bold" size="40.0" />
                </font>
             </Label>
-            <Label fx:id="lblDay" layoutX="109.0" layoutY="93.0" prefHeight="46.0" prefWidth="117.0" text="Monday">
+            <Label fx:id="lblDay" layoutX="105.0" layoutY="99.0" prefHeight="46.0" prefWidth="147.0" text="Monday">
                <font>
                   <Font name="System Bold" size="28.0" />
                </font>
