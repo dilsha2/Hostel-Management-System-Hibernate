@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
 
 <AnchorPane prefHeight="620.0" prefWidth="893.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardformController">
    <children>
@@ -61,6 +63,45 @@
             </VBox>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="dashboardContext" layoutX="201.0" layoutY="80.0" prefHeight="541.0" prefWidth="693.0" />
+      <AnchorPane fx:id="dashboardContext" layoutX="201.0" layoutY="80.0" prefHeight="541.0" prefWidth="693.0">
+         <children>
+            <Label fx:id="lblDate" layoutX="91.0" layoutY="47.0" prefHeight="46.0" prefWidth="174.0" text="2022-06-26">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Separator layoutX="301.0" layoutY="40.0" orientation="VERTICAL" prefHeight="119.0" prefWidth="0.0" />
+            <Label fx:id="lblTime" layoutX="355.0" layoutY="64.0" prefHeight="46.0" prefWidth="174.0" text="10:05:45">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDay" layoutX="109.0" layoutY="93.0" prefHeight="46.0" prefWidth="117.0" text="Monday">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="112.0" layoutY="235.0" text="ROOM QUENTITY" textFill="#e82d2d">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblQty" layoutX="161.0" layoutY="292.0" text="00" textFill="#0014a8">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="375.0" layoutY="235.0" text="AVAILABLE ROOMS" textFill="#ff2222">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAvailable" layoutX="386.0" layoutY="292.0" text="OUT OF ROOM" textFill="#b53183">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbRoomId" layoutX="162.0" layoutY="182.0" prefHeight="25.0" prefWidth="291.0" promptText="Room Id" />
+         </children></AnchorPane>
    </children>
 </AnchorPane>

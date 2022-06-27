@@ -9,7 +9,7 @@ public class AppInitializer extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("view/DashBoardform.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("view/DashBoardForm.fxml"));
         Scene scene = new Scene(root);
         stage.initStyle(StageStyle.TRANSPARENT);
         stage.setScene(scene);
