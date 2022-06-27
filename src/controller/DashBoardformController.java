@@ -136,6 +136,9 @@ public class DashBoardformController {
         dashboardContext.getChildren().add(parent);
     }
 
-    public void logOutOnAction(ActionEvent actionEvent) {
+    public void logOutOnAction(ActionEvent actionEvent) throws IOException {
+        dashboardContext.getChildren().clear();
+        Parent parent = FXMLLoader.load(getClass().getResource("../view/LoginForm.fxml"));
+        dashboardContext.getChildren().add(parent);
     }
 }
