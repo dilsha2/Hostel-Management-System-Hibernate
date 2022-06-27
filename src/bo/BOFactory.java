@@ -1,9 +1,7 @@
 package bo;
 
-import bo.Custom.impl.ManageRoomBOImpl;
-import bo.Custom.impl.ManageStudentBOImpl;
-import bo.Custom.impl.RegisterStudentBOImpl;
-import bo.Custom.impl.ReservationBOImpl;
+import bo.Custom.UserBO;
+import bo.Custom.impl.*;
 
 public class BOFactory {
     private static BOFactory boFactory;
@@ -24,7 +22,7 @@ public class BOFactory {
     public SuperBO getBO(BOTypes types) {
         switch (types) {
             case LOGIN_USER:
-                return new LoginBOImpl();
+                return new UserBOImpl();
             case MANAGE_ROOM:
                 return new ManageRoomBOImpl();
             case MANAGE_STUDENT:
