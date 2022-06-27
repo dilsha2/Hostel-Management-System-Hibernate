@@ -23,8 +23,8 @@ public class BOFactory {
     }
     public SuperBO getBO(BOTypes types) {
         switch (types) {
-//            case LOGIN_USER:
-//                return new LoginBOImpl();
+            case LOGIN_USER:
+                return new LoginBOImpl();
             case MANAGE_ROOM:
                 return new ManageRoomBOImpl();
             case MANAGE_STUDENT:

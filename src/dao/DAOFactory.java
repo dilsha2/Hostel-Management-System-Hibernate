@@ -22,8 +22,8 @@ public class DAOFactory {
 
     public SuperDAO getDAO(DAOTypes types) {
         switch (types) {
-//            case USER:
-//                return new UserDAOImpl();
+            case USER:
+                return new UserDAOImpl();
             case ROOM:
                 return new RoomDAOImpl();
             case STUDENT:
