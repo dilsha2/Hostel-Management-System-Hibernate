@@ -137,8 +137,9 @@ public class DashBoardformController {
     }
 
     public void logOutOnAction(ActionEvent actionEvent) throws IOException {
-        dashboardContext.getChildren().clear();
-        Parent parent = FXMLLoader.load(getClass().getResource("../view/LoginForm.fxml"));
-        dashboardContext.getChildren().add(parent);
+        Stage stage = (Stage) dashboardContext.getScene().getWindow();
+        stage.close();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/LoginForm.fxml"))));
+        stage.show();
     }
 }
