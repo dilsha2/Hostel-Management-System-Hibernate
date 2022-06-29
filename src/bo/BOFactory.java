@@ -1,6 +1,5 @@
 package bo;
 
-import bo.Custom.UserBO;
 import bo.Custom.impl.*;
 
 public class BOFactory {
@@ -21,8 +20,6 @@ public class BOFactory {
     }
     public SuperBO getBO(BOTypes types) {
         switch (types) {
-            case LOGIN_USER:
-                return new UserBOImpl();
             case MANAGE_ROOM:
                 return new ManageRoomBOImpl();
             case MANAGE_STUDENT:
