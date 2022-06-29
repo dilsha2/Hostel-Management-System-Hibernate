@@ -17,13 +17,11 @@ public class DAOFactory {
     }
 
     public enum DAOTypes {
-        USER, ROOM, STUDENT, ROOM_RESERVATION, QUERY_DAO
+        ROOM, STUDENT, ROOM_RESERVATION, QUERY_DAO
     }
 
     public SuperDAO getDAO(DAOTypes types) {
         switch (types) {
-            case USER:
-                return new UserDAOImpl();
             case ROOM:
                 return new RoomDAOImpl();
             case STUDENT:

@@ -11,7 +11,7 @@
 
 <AnchorPane fx:id="reservationFormContext" prefHeight="541.0" prefWidth="693.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentRegiterFormController">
    <children>
-      <Label layoutX="277.0" layoutY="14.0" text="Reservation Form">
+      <Label layoutX="277.0" layoutY="14.0" text="Register Form">
          <font>
             <Font name="System Bold Italic" size="17.0" />
          </font>
