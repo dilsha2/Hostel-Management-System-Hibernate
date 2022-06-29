@@ -65,10 +65,8 @@ public class DashBoardformController {
         int availableRM= roomQty-count;
 
         if(count >= roomQty){
-            lblAvailable.setTextFill(Paint.valueOf("RED"));
             lblAvailable.setText("   OUT OF ROOM");
         }else{
-            lblAvailable.setTextFill(Paint.valueOf("WHITE"));
             lblAvailable.setText(availableRM+"  ROOMS");
         }
     }
